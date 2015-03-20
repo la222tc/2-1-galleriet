@@ -65,7 +65,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Pics\Chrysanthemum.jpg" />
+    <Content Include="Content\Pics\Desert.jpg" />
+    <Content Include="Content\Pics\Hydrangeas.jpg" />
+    <Content Include="Content\Pics\Jellyfish.jpg" />
+    <Content Include="Content\Pics\Koala.jpg" />
+    <Content Include="Content\Pics\Lighthouse.jpg" />
+    <Content Include="Content\Pics\Penguins.jpg" />
+    <Content Include="Content\Pics\skrivbord.png" />
+    <Content Include="Content\Pics\Thumbnails\Chrysanthemum.jpg" />
+    <Content Include="Content\Pics\Thumbnails\Desert.jpg" />
+    <Content Include="Content\Pics\Thumbnails\Hydrangeas.jpg" />
+    <Content Include="Content\Pics\Thumbnails\Jellyfish.jpg" />
+    <Content Include="Content\Pics\Thumbnails\Koala.jpg" />
+    <Content Include="Content\Pics\Thumbnails\Lighthouse.jpg" />
+    <Content Include="Content\Pics\Thumbnails\Penguins.jpg" />
+    <Content Include="Content\Pics\Thumbnails\skrivbord.png" />
+    <Content Include="Content\Pics\Thumbnails\Tulips.jpg" />
+    <Content Include="Content\Pics\Tulips.jpg" />
     <Content Include="Default.aspx" />
+    <Content Include="Css\Style.css" />
+    <Content Include="Script\script.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -77,8 +97,10 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\Gallery.cs" />
+    <Compile Include="Model\Images.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
