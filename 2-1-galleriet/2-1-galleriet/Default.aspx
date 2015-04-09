@@ -13,7 +13,7 @@
     <div id="gallery">
         <h1>Galleriet</h1>
         <div id="gallerybox">
-     <asp:PlaceHolder ID="SuccessPlaceHolder" runat="server" Visible="true">
+     <asp:PlaceHolder ID="SuccessPlaceHolder" runat="server" Visible="false">
          <div id="BorderSuccesBox">
              <div id="SuccesBox">
                  <asp:Label ID="SuccessLabel" runat="server" ></asp:Label>
@@ -58,7 +58,7 @@
 
         </div>
     </div>
-        <script src="Script/script.js" type="text/javascript"></script>
     </form>
+        <script src='<%= ResolveClientUrl("~/Script/script.js") %>' type="text/javascript"></script>
 </body>
 </html>

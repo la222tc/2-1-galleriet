@@ -1,4 +1,4 @@
-﻿"use strict"
+﻿"use strict";
 
 //var esc = document.getElementById("Esc");
 
@@ -8,6 +8,7 @@
 //};
 
 //alert("hej")
+
 var succBox = document.getElementById("BorderSuccesBox");
 
 
@@ -16,6 +17,8 @@ document.getElementById("Esc").addEventListener("click", function (e) {
     succBox.parentNode.removeChild(succBox);
     //alert("hej")
 });
+
+
 
 //var main = {
 //    Init: function () {

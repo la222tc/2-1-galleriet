@@ -43,24 +43,21 @@ namespace _2_1_galleriet.Model
 
         private bool IsValidImage(Image image)
         {
-            if (image.RawFormat.Guid == ImageFormat.Gif.Guid ||
+            return image.RawFormat.Guid == ImageFormat.Gif.Guid ||
                image.RawFormat.Guid == ImageFormat.Jpeg.Guid ||
-               image.RawFormat.Guid == ImageFormat.Png.Guid)
-            {
-                return true;
-            }
-            return false;
+               image.RawFormat.Guid == ImageFormat.Png.Guid;
         }
 
         public string SaveImage(Stream stream, string fileName)
         {
             var image = Image.FromStream(stream);
-            fileName = SantizePath.Replace(fileName, String.Empty);
 
             if (!IsValidImage(image))
             {
                 throw new ArgumentException("Fel format av bild");
             }
+
+            fileName = SantizePath.Replace(fileName, String.Empty);
 
             if (ImageExists(fileName))
 	        {
@@ -78,7 +75,7 @@ namespace _2_1_galleriet.Model
 
             var thubnail = image.GetThumbnailImage(60, 45, null, IntPtr.Zero);
             image.Save(Path.Combine(PhysicalUploadImagesPath, fileName));
-            thubnail.Save(PhysicalUploadImagesPath + "/Thumbnails/" + fileName);
+            thubnail.Save(Path.Combine(PhysicalUploadImagesPath, "Thumbnails", fileName));
 
             return fileName;
         }
